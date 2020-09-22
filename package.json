@@ -24,6 +24,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "https://poulad.github.io/react-playground",
   "browserslist": {
     "production": [
       ">0.2%",
