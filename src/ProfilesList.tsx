@@ -1,11 +1,12 @@
 import React from "react";
 import {Profile} from "./models/profile";
+import ProfileCard from "./ProfileCard";
 
 
 function ProfilesList(props: { profiles: Profile[] }) {
     return (
         <div>
-            {props.profiles.map(p => <h6>{p.name}</h6>)}
+            {props.profiles.map(p => <ProfileCard profile={p}/>)}
         </div>
     )
 }

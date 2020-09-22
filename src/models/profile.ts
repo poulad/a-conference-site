@@ -1,5 +1,7 @@
 export interface Profile {
+    id: string,
+    login: string;
     name: string;
-    company?: string;
-    avatar_url?: string;
+    location: string;
+    avatar_url: string;
 }
