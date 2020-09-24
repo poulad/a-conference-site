@@ -1,5 +1,5 @@
 import React from "react";
-import {Profile} from "./models/profile";
+import {Profile} from "../models/profile";
 import ProfileCard from "./ProfileCard";
 
 

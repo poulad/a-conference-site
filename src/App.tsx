@@ -1,7 +1,21 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
+import GameBoard from "./components/GameBoard";
+
+function App() {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <GameBoard/>
+            </header>
+        </div>
+    );
+}
+
+/*
+import React, {useState} from 'react';
 import UserInputForm from "./UserInputForm";
-import ProfilesList from "./ProfilesList";
+import ProfilesList from "./components/ProfilesList";
 import {Profile} from "./models/profile";
 
 async function getUserProfile(username: string): Promise<Profile> {
@@ -10,7 +24,7 @@ async function getUserProfile(username: string): Promise<Profile> {
     return respData as Profile;
 }
 
-function App() {
+function App1() {
     const [state, setState] = useState({
         profiles: new Array<Profile>()
     })
@@ -33,5 +47,6 @@ function App() {
         </div>
     );
 }
+*/
 
 export default App;
