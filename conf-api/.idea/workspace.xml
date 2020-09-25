@@ -20,20 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad25be72-8c66-472e-aa25-0a8f10e49a97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/conf-api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600977007512</updated>
-      <workItem from="1600977009005" duration="470000" />
+      <workItem from="1600977009005" duration="2214000" />
     </task>
     <servers />
   </component>
@@ -104,25 +91,77 @@
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
     <state x="140" y="378" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1600977321908" />
-    <state width="1225" height="507" key="GridCell.Tab.0.bottom" timestamp="1600977328070">
+    <state width="1233" height="426" key="GridCell.Tab.0.bottom" timestamp="1600981237362">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="1225" height="507" key="GridCell.Tab.0.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1600977328070" />
-    <state width="1225" height="507" key="GridCell.Tab.0.center" timestamp="1600977328070">
+    <state width="1233" height="426" key="GridCell.Tab.0.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237362" />
+    <state width="1233" height="426" key="GridCell.Tab.0.center" timestamp="1600981237362">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="1225" height="507" key="GridCell.Tab.0.center/62.0.2498.1440@62.0.2498.1440" timestamp="1600977328070" />
-    <state width="1225" height="507" key="GridCell.Tab.0.left" timestamp="1600977328070">
+    <state width="1233" height="426" key="GridCell.Tab.0.center/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237362" />
+    <state width="1233" height="426" key="GridCell.Tab.0.left" timestamp="1600981237362">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="1225" height="507" key="GridCell.Tab.0.left/62.0.2498.1440@62.0.2498.1440" timestamp="1600977328070" />
-    <state width="1225" height="507" key="GridCell.Tab.0.right" timestamp="1600977328070">
+    <state width="1233" height="426" key="GridCell.Tab.0.left/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237362" />
+    <state width="1233" height="426" key="GridCell.Tab.0.right" timestamp="1600981237362">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
-    <state width="1225" height="507" key="GridCell.Tab.0.right/62.0.2498.1440@62.0.2498.1440" timestamp="1600977328070" />
+    <state width="1233" height="426" key="GridCell.Tab.0.right/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237362" />
+    <state width="1233" height="426" key="GridCell.Tab.1.bottom" timestamp="1600981237362">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.1.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237362" />
+    <state width="1233" height="426" key="GridCell.Tab.1.center" timestamp="1600981237362">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.1.center/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237362" />
+    <state width="1233" height="426" key="GridCell.Tab.1.left" timestamp="1600981237362">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.1.left/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237362" />
+    <state width="1233" height="426" key="GridCell.Tab.1.right" timestamp="1600981237362">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.1.right/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237362" />
+    <state width="1233" height="426" key="GridCell.Tab.2.bottom" timestamp="1600981237363">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.2.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237363" />
+    <state width="1233" height="426" key="GridCell.Tab.2.center" timestamp="1600981237363">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.2.center/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237363" />
+    <state width="1233" height="426" key="GridCell.Tab.2.left" timestamp="1600981237363">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.2.left/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237363" />
+    <state width="1233" height="426" key="GridCell.Tab.2.right" timestamp="1600981237363">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.2.right/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237363" />
+    <state width="1233" height="426" key="GridCell.Tab.3.bottom" timestamp="1600981237363">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.3.bottom/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237363" />
+    <state width="1233" height="426" key="GridCell.Tab.3.center" timestamp="1600981237363">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.3.center/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237363" />
+    <state width="1233" height="426" key="GridCell.Tab.3.left" timestamp="1600981237363">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.3.left/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237363" />
+    <state width="1233" height="426" key="GridCell.Tab.3.right" timestamp="1600981237363">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state width="1233" height="426" key="GridCell.Tab.3.right/62.0.2498.1440@62.0.2498.1440" timestamp="1600981237363" />
     <state x="187" y="62" width="998" height="1017" key="SettingsEditor" timestamp="1600977481572">
       <screen x="62" y="0" width="2498" height="1440" />
     </state>
     <state x="187" y="62" width="998" height="1017" key="SettingsEditor/62.0.2498.1440@62.0.2498.1440" timestamp="1600977481572" />
+    <state x="559" y="567" width="716" height="519" key="cloudConfig.SelfSettingsDialog" timestamp="1600977500046">
+      <screen x="62" y="0" width="2498" height="1440" />
+    </state>
+    <state x="559" y="567" width="716" height="519" key="cloudConfig.SelfSettingsDialog/62.0.2498.1440@62.0.2498.1440" timestamp="1600977500046" />
   </component>
 </project>
