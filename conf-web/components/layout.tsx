@@ -1,12 +1,13 @@
 import React from "react";
 import Head from "next/head"
+import Link from "next/link";
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 
-const name = 'Poulad Ashrafpour'
-export const siteTitle = 'A Conference Site'
+const name = 'Poulad Ashrafpour';
+export const siteTitle = 'A Conference Site';
 
-export default function Layout({children, home}) {
+export default function Layout({children, home = null}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,6 +24,7 @@ export default function Layout({children, home}) {
         />
         <meta name="og:title" content={siteTitle}/>
         <meta name="twitter:card" content="summary_large_image"/>
+        <title>LAYOUT_TITLE</title>
       </Head>
       <header className={styles.header}>
         {home ? (

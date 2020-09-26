@@ -1,8 +1,17 @@
+import React from "react";
+import {GetStaticProps} from "next";
 import Head from 'next/head'
+import Link from "next/link";
 import Layout, {siteTitle} from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 
-export default function Home() {
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {}
+  }
+}
+
+export default function Home(props) {
   return (
     <Layout home>
       <Head>
@@ -11,8 +20,7 @@ export default function Home() {
       <section className={utilStyles.headingMd}>
         <p>Hello, I'm Poulad. I'm a software engineer interested in web technologies.</p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          Check out <Link href="talks/foo">this talk</Link>.
         </p>
       </section>
     </Layout>
