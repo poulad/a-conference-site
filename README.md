@@ -50,3 +50,10 @@ https://github.com/karlhorky/awesome-speakers
 
 https://github.com/JanVanRyswyck/awesome-talks
 -->
+
+<!--
+Credits
+
+Icon: https://pixabay.com/vectors/coffee-minimal-wallpaper-white-2085314/
+
+-->

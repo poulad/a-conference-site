@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head"
 import Link from "next/link";
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import styles from "./layout.module.css"
+import utilStyles from "../styles/utils.module.css"
 
 const name = 'Poulad Ashrafpour';
 export const siteTitle = 'A Conference Site';
@@ -24,7 +24,7 @@ export default function Layout({children, home = null}) {
         />
         <meta name="og:title" content={siteTitle}/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <title>LAYOUT_TITLE</title>
+        <title>! NO_TITLE !</title>
       </Head>
       <header className={styles.header}>
         {home ? (
