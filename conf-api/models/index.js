@@ -4,8 +4,8 @@ const { initConferenceModel } = require('./conference')
 let sequelizeInstance
 
 function init(connectionString) {
-  if (typeof connectionString !== 'string' || !connectionString.length) {
-    throw new Error(`Database connection string is invalid! (type: ${typeof connectionString}, length: ${connectionString?.length})`)
+  if (!connectionString || typeof connectionString !== 'string' || !connectionString.length) {
+    throw new Error(`Database connection string is invalid! (type: ${typeof connectionString})`)
   }
 
   sequelizeInstance = new Sequelize(connectionString)
