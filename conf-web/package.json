@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.0.0",
     "classnames": "^2.2.6",
     "next": "9.5.3",
     "react": "16.13.1",

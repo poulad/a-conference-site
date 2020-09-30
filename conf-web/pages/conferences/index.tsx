@@ -38,7 +38,10 @@ export default function Conferences(props: { conferences: any[] }) {
             <div className="card-body">
               <h5 className="card-title">{c.name}</h5>
               <p className="card-text">{c.description}</p>
-              <a href={c.website} className="btn btn-primary" target="_blank">Homepage</a>
+              <a href={c.website} className="btn btn-primary" target="_blank">
+                Check Homepage
+                <img src="https://unpkg.com/bootstrap-icons@%5E1/icons/box-arrow-up-right.svg" alt="offsite link"/>
+              </a>
             </div>
           </div>
         )
