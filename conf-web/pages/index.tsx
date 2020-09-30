@@ -3,7 +3,6 @@ import {GetStaticProps} from "next";
 import Head from 'next/head'
 import Link from "next/link";
 import Layout, {siteTitle} from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
@@ -17,7 +16,7 @@ export default function Home(props) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section>
         <p>Hello, I'm Poulad. I'm a software engineer interested in web technologies.</p>
         <p>
           Check out <Link href="talks/foo">this talk</Link>.
