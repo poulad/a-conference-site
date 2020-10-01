@@ -1,8 +1,22 @@
 import "react"
+import {useContext} from "react";
+import {Form} from "react-bootstrap";
 import Link from "next/link";
-import {siteTitle} from "./layout";
+import {siteTitle, ThemeContext} from "./layout";
 
 export default function Header() {
+  const themeContextValue = useContext(ThemeContext)
+
+  const toggleTheme = () => {
+    if (themeContextValue.theme === "light") {
+      themeContextValue.setTheme("dark")
+    } else if (themeContextValue.theme === "dark") {
+      themeContextValue.setTheme("light")
+    } else {
+      throw new Error(`Unexpected theme ${themeContextValue.theme}`)
+    }
+  }
+
   return <header>
     <div className="collapse bg-dark" id="navbarHeader">
       <div className="container">
@@ -32,6 +46,7 @@ export default function Header() {
             <strong>{siteTitle}</strong>
           </a>
         </Link>
+        <Form.Switch type="switch" id="theme-switch" label={themeContextValue.theme} onChange={toggleTheme}/>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                 aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

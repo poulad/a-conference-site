@@ -1,11 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import Head from "next/head"
 import Header from "./header";
 import Footer from "./footer";
 
 export const siteTitle = 'A Conference Site';
 
+interface ThemeContextType {
+  theme: string;
+  setTheme: (theme: string) => void
+}
+
+export const ThemeContext = React.createContext({} as ThemeContextType)
+
 export default function Layout({children, home = null}) {
+  const [theme, setTheme] = useState("light")
+  const themeContextValue: ThemeContextType = {theme, setTheme}
+
   return <>
     <Head>
       <link rel="icon" href="/favicon.ico"/>
@@ -18,14 +28,16 @@ export default function Layout({children, home = null}) {
       <title>{siteTitle}</title>
       <link
         rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        href={theme === "light" ? "https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css" : "https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"}
+        integrity={theme === "light" ? "sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" : "sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"}
         crossOrigin="anonymous"
       />
     </Head>
-    <Header/>
-    <main role="main">{children}</main>
-    <Footer/>
+    <ThemeContext.Provider value={themeContextValue}>
+      <Header/>
+      <main role="main">{children}</main>
+      <Footer/>
+    </ThemeContext.Provider>
     {/*<header>*/}
     {/*  {home ? (*/}
     {/*    <>*/}
@@ -55,5 +67,5 @@ export default function Layout({children, home = null}) {
     {/*    </Link>*/}
     {/*  </div>*/}
     {/*)}*/}
-  </>
+  </>;
 }
