@@ -15,6 +15,20 @@
                 "PORT": "3001"
             },
             "program": "${workspaceFolder}\\conf-api\\bin\\www"
+        },
+        {
+            "name": "Launch Nextjs Dev Server",
+            "request": "launch",
+            "runtimeArgs": [
+                "run",
+                "dev"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node",
+            "cwd": "${workspaceFolder}/conf-web"
         }
     ]
 }

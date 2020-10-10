@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Head from "next/head"
 import Header from "./header";
 import Footer from "./footer";
@@ -15,6 +15,24 @@ export const ThemeContext = React.createContext({} as ThemeContextType)
 export default function Layout({children, home = null}) {
   const [theme, setTheme] = useState("light")
   const themeContextValue: ThemeContextType = {theme, setTheme}
+
+  useEffect(() => {
+    if (typeof window.matchMedia !== 'function') return
+
+    const updateThemeForUserPreference = (isDark: boolean) => {
+      setTheme(isDark ? 'dark' : 'light')
+    }
+
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)')
+    updateThemeForUserPreference(prefersDarkScheme.matches)
+
+    const changeListener = (ev: MediaQueryListEvent) => {
+      updateThemeForUserPreference(ev.matches)
+    }
+    prefersDarkScheme.addEventListener('change', changeListener)
+
+    return () => prefersDarkScheme.removeEventListener('change', changeListener)
+  }, [])
 
   return <>
     <Head>

@@ -1,6 +1,6 @@
 import "react"
 import {useContext} from "react";
-import {Form} from "react-bootstrap";
+import {Form, FormCheck} from "react-bootstrap";
 import Link from "next/link";
 import {siteTitle, ThemeContext} from "./layout";
 
@@ -16,6 +16,8 @@ export default function Header() {
       throw new Error(`Unexpected theme ${themeContextValue.theme}`)
     }
   }
+
+  const themeIconName = themeContextValue.theme === 'dark' ? 'moon' : 'sun'
 
   return <header>
     <div className="collapse bg-dark" id="navbarHeader">
@@ -46,7 +48,12 @@ export default function Header() {
             <strong>{siteTitle}</strong>
           </a>
         </Link>
-        <Form.Switch type="switch" id="theme-switch" label={themeContextValue.theme} onChange={toggleTheme}/>
+        <Form.Switch type="switch" id="theme-switch" onChange={toggleTheme} checked={themeContextValue.theme === 'dark'}
+                     label={
+                       <img src={`https://unpkg.com/bootstrap-icons@%5E1/icons/${themeIconName}.svg`}
+                            alt="theme icon" aria-disabled="true"
+                            style={{filter: "invert(93%) sepia(84%) saturate(764%) hue-rotate(333deg) brightness(106%) contrast(103%)"}}/>
+                     }/>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
                 aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
