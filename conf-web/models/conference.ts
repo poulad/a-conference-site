@@ -4,5 +4,6 @@ export interface Conference {
   website: string;
   description: string;
   logo_url: string;
+  logo_dark_bg: boolean;
   created_at: Date;
 }
