@@ -1,8 +1,9 @@
 import "react"
-import {useContext} from "react";
-import {Form, FormCheck} from "react-bootstrap";
+import { useContext } from "react";
+import { Form } from "react-bootstrap";
 import Link from "next/link";
-import {siteTitle, ThemeContext} from "./layout";
+import { siteTitle } from "./layout";
+import { ThemeContext } from "../pages/_app";
 
 export default function Header() {
   const themeContextValue = useContext(ThemeContext)
@@ -26,7 +27,7 @@ export default function Header() {
           <div className="col-sm-8 col-md-7 py-4">
             <h4 className="text-white">About</h4>
             <p className="text-muted">Add some information about the album below, the author, or any other background
-              context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off
+            context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off
               to some social networking sites or contact information.</p>
           </div>
           <div className="col-sm-4 offset-md-1 py-4">
@@ -44,18 +45,18 @@ export default function Header() {
       <div className="container d-flex justify-content-between">
         <Link href="/">
           <a className="navbar-brand d-flex align-items-center">
-            <img src="logo.svg" alt="logo" width="50" height="50" className="mr-2 rounded-circle"/>
+            <img src="logo.svg" alt="logo" width="50" height="50" className="mr-2 rounded-circle" />
             <strong>{siteTitle}</strong>
           </a>
         </Link>
         <Form.Switch type="switch" id="theme-switch" onChange={toggleTheme} checked={themeContextValue.theme === 'dark'}
-                     label={
-                       <img src={`https://unpkg.com/bootstrap-icons@%5E1/icons/${themeIconName}.svg`}
-                            alt="theme icon" aria-disabled="true"
-                            style={{filter: "invert(93%) sepia(84%) saturate(764%) hue-rotate(333deg) brightness(106%) contrast(103%)"}}/>
-                     }/>
+          label={
+            <img src={`https://unpkg.com/bootstrap-icons@%5E1/icons/${themeIconName}.svg`}
+              alt="theme icon" aria-disabled="true"
+              style={{ filter: "invert(93%) sepia(84%) saturate(764%) hue-rotate(333deg) brightness(106%) contrast(103%)" }} />
+          } />
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
-                aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
       </div>

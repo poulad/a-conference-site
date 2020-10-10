@@ -1,61 +1,34 @@
-import React, {useEffect, useState} from "react";
+import React, { useContext } from "react";
 import Head from "next/head"
 import Header from "./header";
 import Footer from "./footer";
+import { ThemeContext } from "../pages/_app";
 
 export const siteTitle = 'A Conference Site';
 
-interface ThemeContextType {
-  theme: string;
-  setTheme: (theme: string) => void
-}
-
-export const ThemeContext = React.createContext({} as ThemeContextType)
-
-export default function Layout({children, home = null}) {
-  const [theme, setTheme] = useState("light")
-  const themeContextValue: ThemeContextType = {theme, setTheme}
-
-  useEffect(() => {
-    if (typeof window.matchMedia !== 'function') return
-
-    const updateThemeForUserPreference = (isDark: boolean) => {
-      setTheme(isDark ? 'dark' : 'light')
-    }
-
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)')
-    updateThemeForUserPreference(prefersDarkScheme.matches)
-
-    const changeListener = (ev: MediaQueryListEvent) => {
-      updateThemeForUserPreference(ev.matches)
-    }
-    prefersDarkScheme.addEventListener('change', changeListener)
-
-    return () => prefersDarkScheme.removeEventListener('change', changeListener)
-  }, [])
+export default function Layout({ children, home = null }) {
+  const themeContextValue = useContext(ThemeContext)
 
   return <>
     <Head>
-      <link rel="icon" href="/favicon.ico"/>
+      <link rel="icon" href="/favicon.ico" />
       <meta
         name="description"
         content="Learn how to build a personal website using Next.js"
       />
-      <meta name="og:title" content={siteTitle}/>
-      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="og:title" content={siteTitle} />
+      <meta name="twitter:card" content="summary_large_image" />
       <title>{siteTitle}</title>
       <link
         rel="stylesheet"
-        href={theme === "light" ? "https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css" : "https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"}
-        integrity={theme === "light" ? "sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" : "sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"}
+        href={themeContextValue.theme === "light" ? "https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css" : "https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"}
+        integrity={themeContextValue.theme === "light" ? "sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" : "sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN"}
         crossOrigin="anonymous"
       />
     </Head>
-    <ThemeContext.Provider value={themeContextValue}>
-      <Header/>
-      <main role="main">{children}</main>
-      <Footer/>
-    </ThemeContext.Provider>
+    <Header />
+    <main role="main">{children}</main>
+    <Footer />
     {/*<header>*/}
     {/*  {home ? (*/}
     {/*    <>*/}
