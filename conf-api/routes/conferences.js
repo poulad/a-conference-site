@@ -1,15 +1,15 @@
-const express = require('express');
-const { Conference } = require('../models/conference')
+const express = require("express");
+const { Conference } = require("../models/conference");
 const router = express.Router();
 
 async function queryConferences() {
-  return Conference.findAll()
+  return Conference.findAll();
 }
 
-router.get('/', async (req, res, next) => {
+router.get("/", async (req, res, next) => {
   try {
-    const confs = await queryConferences()
-    res.type('json')
+    const confs = await queryConferences();
+    res.type("json");
     res.send(confs);
   } catch (e) {
     res.send(JSON.stringify(e));
