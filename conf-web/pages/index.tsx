@@ -1,7 +1,7 @@
 import React from "react";
 import { GetStaticProps } from "next";
 import Link from "next/link";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { SITE_TITLE } from "../components/layout";
 
 export const getStaticProps: GetStaticProps = async () => {
   return {

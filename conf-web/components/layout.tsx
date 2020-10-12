@@ -4,7 +4,7 @@ import Header from "./header";
 import Footer from "./footer";
 import { ThemeContext } from "../pages/_app";
 
-export const siteTitle = "A Conference Site";
+export const SITE_TITLE = "A Conference Site";
 
 export default function Layout({ children, home = null }) {
   const themeContextValue = useContext(ThemeContext);
@@ -17,9 +17,9 @@ export default function Layout({ children, home = null }) {
           name="description"
           content="Learn how to build a personal website using Next.js"
         />
-        <meta name="og:title" content={siteTitle} />
+        <meta name="og:title" content={SITE_TITLE} />
         <meta name="twitter:card" content="summary_large_image" />
-        <title>{siteTitle}</title>
+        <title>{SITE_TITLE}</title>
         <link
           rel="stylesheet"
           href={

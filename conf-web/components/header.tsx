@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Form } from "react-bootstrap";
 import Link from "next/link";
-import { siteTitle } from "./layout";
+import { SITE_TITLE } from "./layout";
 import { ThemeContext } from "../pages/_app";
 
 export default function Header() {
@@ -67,7 +67,7 @@ export default function Header() {
                 height="50"
                 className="mr-2 rounded-circle"
               />
-              <strong>{siteTitle}</strong>
+              <strong>{SITE_TITLE}</strong>
             </a>
           </Link>
           <Form.Switch
