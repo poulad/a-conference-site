@@ -1,17 +1,21 @@
 import { DependencyList, useEffect } from "react";
 
+type Options = {
+  doFinally?: () => void;
+  doCleanup?: () => void;
+  deps: DependencyList;
+};
+
 export default function useAsyncHook(
-  asyncFunc: (...args: any[]) => Promise<any>,
+  doAsync: (...args: any[]) => Promise<any>,
   setErrorState: (errorState: Error) => void,
-  asyncFinallyFunc?: () => void,
-  cleanupFunc?: () => void,
-  deps: DependencyList = undefined
+  options?: Options
 ) {
   useEffect(() => {
-    asyncFunc().catch(setErrorState).finally(asyncFinallyFunc);
+    doAsync().catch(setErrorState).finally(options?.doFinally);
 
-    if (cleanupFunc) {
-      return cleanupFunc;
+    if (options?.doCleanup) {
+      return options.doCleanup;
     }
-  }, deps);
+  }, options?.deps);
 }

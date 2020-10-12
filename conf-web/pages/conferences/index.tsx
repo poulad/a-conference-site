@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Axios from "axios";
 import Layout from "../../components/layout";
 import { Conference } from "../../models/conference";
 import { AppSettings, getAppSettings } from "../../providers/settings";
-import { GetStaticProps } from "next";
 import useAsyncHook from "../../services/use-async-hook";
 import Spinner from "../../components/spinner";
 
@@ -61,9 +61,10 @@ export default function Conferences(props: Props) {
       setConferences(resp.data);
     },
     setError,
-    () => setLoading(false),
-    null,
-    []
+    {
+      doFinally: () => setLoading(false),
+      deps: [],
+    }
   );
 
   if (error) throw error;
