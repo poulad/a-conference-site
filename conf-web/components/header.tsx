@@ -1,23 +1,23 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Form } from "react-bootstrap";
 import Link from "next/link";
 import { SITE_TITLE } from "./layout";
-import { ThemeContext } from "../pages/_app";
+import { useTheme } from "../providers/use-theme";
 
 export default function Header() {
-  const themeContextValue = useContext(ThemeContext);
+  const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    if (themeContextValue.theme === "light") {
-      themeContextValue.setTheme("dark");
-    } else if (themeContextValue.theme === "dark") {
-      themeContextValue.setTheme("light");
+    if (theme === "light") {
+      setTheme("dark");
+    } else if (theme === "dark") {
+      setTheme("light");
     } else {
-      throw new Error(`Unexpected theme ${themeContextValue.theme}`);
+      throw new Error(`Unexpected theme ${theme}`);
     }
   };
 
-  const themeIconName = themeContextValue.theme === "dark" ? "moon" : "sun";
+  const themeIconName = theme === "dark" ? "moon" : "sun";
 
   return (
     <header>
@@ -74,7 +74,7 @@ export default function Header() {
             type="switch"
             id="theme-switch"
             onChange={toggleTheme}
-            checked={themeContextValue.theme === "dark"}
+            checked={theme === "dark"}
             label={
               <img
                 src={`https://unpkg.com/bootstrap-icons@%5E1/icons/${themeIconName}.svg`}
